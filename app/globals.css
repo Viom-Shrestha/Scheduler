@@ -1,26 +1,57 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-bg: #f0effa;
+  --color-ink: #241f45;
+  --color-ink-soft: #5c5680;
+  --color-ink-muted: #8e88ae;
+  --color-ink-faint: #615b85;
+  --color-pink: #ff3f7f;
+  --color-pink-hover: #d9245c;
+  --color-border-dotted: #e4e1f5;
+  --color-card-done-bg: #f3f2fb;
+  --color-card-done-fg: #6f6a93;
+  --font-display: "Baloo 2", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Karla", ui-sans-serif, system-ui, sans-serif;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-bg: var(--color-bg);
+  --color-ink: var(--color-ink);
+  --color-ink-soft: var(--color-ink-soft);
+  --color-ink-muted: var(--color-ink-muted);
+  --color-ink-faint: var(--color-ink-faint);
+  --color-pink: var(--color-pink);
+  --color-pink-hover: var(--color-pink-hover);
+  --color-border-dotted: var(--color-border-dotted);
+  --color-card-done-bg: var(--color-card-done-bg);
+  --color-card-done-fg: var(--color-card-done-fg);
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html,
+body {
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-bg);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='0.18'/%3E%3C/svg%3E");
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--color-pink);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--color-pink-hover);
+}
+
+.dotted-top {
+  border-top: 2px dotted var(--color-border-dotted);
 }
