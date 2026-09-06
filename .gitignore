@@ -40,6 +40,9 @@ yarn-error.log*
 # local sqlite database
 /data/
 
+# desktop launcher runtime output
+/scripts/server*.log
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
